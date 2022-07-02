@@ -1,0 +1,9 @@
+---
+- hosts: server2.abc.com 
+  remote_user: test100
+  become: yes
+  tasks:
+      - include: install.yml
+      - include: copy.yaml
+      - include: service.yml
+

@@ -1,0 +1,12 @@
+---
+- hosts: webserver 
+  remote_user: test100
+  become: yes
+  tasks:
+   - name: Install httpd package
+     yum: name={{item}} state=installed
+     with_items:
+       - httpd
+       - curl
+       - lynx
+

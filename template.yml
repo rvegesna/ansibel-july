@@ -1,0 +1,8 @@
+---
+- hosts: webserver 
+  remote_user: test100
+  become: yes
+  tasks:
+   - name: create abc file 
+     template: src=abc.j2 dest=/etc/abc
+
